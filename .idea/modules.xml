@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/system-globalVision-api.iml" filepath="$PROJECT_DIR$/.idea/modules/system-globalVision-api.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/system-globalVision-api_main.iml" filepath="$PROJECT_DIR$/.idea/modules/system-globalVision-api_main.iml" group="system-globalVision-api" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/system-globalVision-api_test.iml" filepath="$PROJECT_DIR$/.idea/modules/system-globalVision-api_test.iml" group="system-globalVision-api" />
+      <module fileurl="file://$PROJECT_DIR$/program.iml" filepath="$PROJECT_DIR$/program.iml" />
     </modules>
   </component>
 </project>
