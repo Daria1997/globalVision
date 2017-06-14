@@ -5,10 +5,7 @@ import com.globalVisionSystem.domains.base.BaseEntity;
 import com.globalVisionSystem.domains.project.Project;
 import com.globalVisionSystem.domains.task.Task;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +13,11 @@ import java.util.List;
  * Created by Dasha on 07.06.2017.
  */
 @Entity
-public class Performer extends BaseEntity {
+@Table(name = "performer")
+public class Performer {
+    @Id
+    @GeneratedValue
+    private Long id;
     private String firstName;
     private String lastName;
     private Long phone;
@@ -37,6 +38,14 @@ public class Performer extends BaseEntity {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phone = phone;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public List<Task> getTasks() {

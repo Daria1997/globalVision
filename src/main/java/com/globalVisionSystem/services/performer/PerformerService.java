@@ -1,7 +1,7 @@
 package com.globalVisionSystem.services.performer;
 
-import com.globalVisionSystem.repository.IRepository;
 import com.globalVisionSystem.domains.performer.Performer;
+import com.globalVisionSystem.repository.PerformerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,8 +27,18 @@ import java.util.List;
 public class PerformerService {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
+    private PerformerRepository performerRepository;
+
     @Autowired
-    private IRepository<Performer, Long> performerRepository;
+    public PerformerService(PerformerRepository performerRepository) {
+        this.performerRepository = performerRepository;
+    }
+//    private IRepository<Performer, Long> performerRepository;
+
+//    @Autowired
+//    public PerformerService(IRepository<Performer, Long> performerRepository){
+//        this.performerRepository = performerRepository;
+//    }
 
     public List<Performer> getAll(){
         logger.info("> findAll");

@@ -31,6 +31,10 @@ public class ProjectService {
     @Autowired
     private IRepository<Project, Long> projectRepository;
 
+    public ProjectService(IRepository<Project, Long> projectRepository){
+        this.projectRepository = projectRepository;
+    }
+
     public List<Project> getAll(){
         logger.info("> findAll");
 

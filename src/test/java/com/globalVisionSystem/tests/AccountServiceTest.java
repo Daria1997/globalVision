@@ -35,7 +35,7 @@ public class AccountServiceTest {
         List<Account> list = service.getAll();
 
         Assert.assertNotNull("failure - expected not null", list);
-        Assert.assertNotEquals("failure - expected size", 2, list.size());
+        Assert.assertNotEquals("failure - expected size", 3, list.size());
     }
 
     @Test

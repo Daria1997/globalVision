@@ -6,6 +6,7 @@ import com.globalVisionSystem.domains.performer.Performer;
 import com.globalVisionSystem.domains.project.Project;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ import java.util.List;
 /**
  * Created by Dasha on 07.06.2017.
  */
+@Entity
 public class Manager extends BaseEntity {
     private String firstName;
     private String lastName;

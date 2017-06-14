@@ -30,6 +30,10 @@ public class AccountService {
     @Autowired
     private IRepository<Account, Long> accountRepository;
 
+//    public AccountService(IRepository<Account, Long> accountRepository){
+//        this.accountRepository = accountRepository;
+//    }
+
     public List<Account> getAll(){
         logger.info("> findAll");
 

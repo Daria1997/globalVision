@@ -30,6 +30,10 @@ public class ManagerService {
     @Autowired
     private IRepository<Manager, Long> managerRepository;
 
+    public ManagerService(IRepository<Manager, Long> managerRepository){
+        this.managerRepository = managerRepository;
+    }
+
     public List<Manager> getAll(){
         logger.info("> findAll");
 

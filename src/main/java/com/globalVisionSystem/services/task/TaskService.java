@@ -30,6 +30,10 @@ public class TaskService {
     @Autowired
     private IRepository<Task, Long> taskRepository;
 
+    public TaskService(IRepository<Task, Long> taskRepository){
+        this.taskRepository = taskRepository;
+    }
+
     public List<Task> getAll(){
         logger.info("> findAll");
 
