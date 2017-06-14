@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
     this.projects = await this._appService.getProjects();
   }
 
-  public async showProjectInfo(id: number): void {
+  public async showProjectInfo(id: number): Promise<void> {
     this.selectedProject = await this._appService.getProject(id);
   }
 
