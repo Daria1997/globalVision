@@ -35,23 +35,50 @@
     </div>
   </div>
 
-  <div class="well">
-    <h2>Projects:</h2>
-    <ul>
-      <li *ngFor="let project of projects">
-        <span (click)="showProjectInfo(project.id)">
+  <div class="row">
+    <div class="col-sm-6">
+      <h2>Projects (click to get info):</h2>
+      <ul>
+        <li *ngFor="let project of projects" class="pointer">
+        <span (click)="showProjectInfo(project)">
           {{project.name}}
         </span>
-      </li>
-    </ul>
+        </li>
+      </ul>
+      <hr>
+      <div *ngIf="selectedProject">
+        <div>Project Name: {{selectedProject.name}}</div>
+        <div><b>Manager: {{manager.firstName + manager.lastName}}</b></div>
+        <div>Perfomers:
+          <ol>
+            <li *ngFor="let performer of performers">
+              {{performer.firstName}}
+              {{performer.lastName}}
+              Phone: {{performer.phone}}
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      Tasks
+      <ol>
+        <li *ngFor="let task of tasks">
+          Name: {{task.name}} <br>
+          Description: {{task.description}} <br>
+          State: {{task.state}} <br>
+        </li>
+      </ol>
+    </div>
   </div>
 </div>
 
-<footer class="footer">
-  <div class="container">
+  <footer class="footer">
+    <div class="container">
     <span class="text-muted">
       Made with <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i>️
       by Mike, Daria, Arina
     </span>
-  </div>
-</footer>
+    </div>
+  </footer>
