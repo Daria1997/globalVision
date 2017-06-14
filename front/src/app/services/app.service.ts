@@ -16,4 +16,10 @@ export class AppService {
     }).toPromise();
   }
 
+  public getProject(id): Promise<Project> {
+    return this.http.get(this.API_URL + 'project?id'+id).map((pr) => {
+      return pr.json();
+    }).toPromise();
+  }
+
 }
