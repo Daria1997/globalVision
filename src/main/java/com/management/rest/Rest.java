@@ -11,6 +11,7 @@ import com.management.services.Performer.PerformerService;
 import com.management.services.Project.ProjectService;
 import com.management.services.Task.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -37,46 +38,57 @@ public class Rest {
         this.taskService = taskService;
     }
 
+    @CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
     @GetMapping("account")
     public Account getAccount(Integer id) {
         return accountService.get(id);
 }
 
+    @CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
     @GetMapping("accounts")
     public List<Account> getAccounts() { return accountService.getAll(); }
 
+    @CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
     @GetMapping("manager")
     public Manager getManager(Integer id) {
         return managerService.get(id);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
     @GetMapping("managers")
     public List<Manager> getManagers() { return managerService.getAll(); }
 
+    @CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
     @GetMapping("performer")
     public Performer getPerformer(Integer id) {
         return performerService.get(id);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
     @GetMapping("performers")
     public List<Performer> getPerformers() { return performerService.getAll(); }
 
+    @CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
     @GetMapping("project")
     public Project getProject(Integer id) {
         return projectService.get(id);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
     @GetMapping("projects")
     public List<Project> getProjects() { return projectService.getAll(); }
 
+    @CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
     @GetMapping("task")
     public Task getTask(Integer id) {
         return taskService.get(id);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
     @GetMapping("tasks")
     public List<Task> getTasks() { return taskService.getAll(); }
 
+    @CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
     @GetMapping("createAccount")
     public Account createAccount(){
         Account account = new Account();

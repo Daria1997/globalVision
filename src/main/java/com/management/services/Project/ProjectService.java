@@ -85,7 +85,7 @@ public class ProjectService {
             throw new NoResultException("Requested entity not found.");
         }
         projectToUpdate.setName(project.getName());
-        projectToUpdate.setManager(project.getManager());
+//        projectToUpdate.setManager(project.getManager());
         return projectRepository.save(projectToUpdate);
     }
 
