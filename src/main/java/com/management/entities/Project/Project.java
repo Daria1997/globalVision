@@ -26,7 +26,7 @@ public class Project {
     private List<Performer> performers;
     @JsonIgnore
     @ManyToOne
-    @JoinColumn(name = "manager_id")
+    @JoinColumn(name = "managerId")
     private Manager manager;
 
     public String getName() {
